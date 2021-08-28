@@ -1,0 +1,13 @@
+.center{
+  width:400px;
+  margin:0 auto;
+  padding:20px;
+  background-color:teal;
+  
+}
+input{
+  font-size:2em;
+}
+button{
+  font-size:2em;
+}

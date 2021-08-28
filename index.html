@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="script.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="center">
+
+    </div>
+    <script>
+        const calculator = document.querySelector(".center");
+const container = document.createElement("div");
+container.innerHTML = `
+<h2>Simple Calculator</h2>
+<p><input type="number" id="number1"></p>
+<p><input type="number" id="number2"></p>
+  <button id="add" onclick="add()">+</button>
+   <button id="subtract" onclick="sub()">-</button>
+   <button id="multiply"onclick="multi()">*</button>
+  <button id="divide"onclick="div()">/</button>
+  <button id="clear"onclick="clr()">C</button>
+ 
+  <h2 id="result"></h2>
+`;
+calculator.append(container);
+
+function add(){
+  let input1=document.querySelector("#number1").value;
+  let input2=document.querySelector("#number2").value;
+  sum= +input1+ +input2;
+  let final=document.querySelector("#result");
+  final.innerText=sum;
+}
+function sub(){
+  let input1=document.querySelector("#number1").value;
+  let input2=document.querySelector("#number2").value;
+  sum= +input1- +input2;
+  let final=document.querySelector("#result");
+  final.innerText=sum;
+}
+function multi(){
+  let input1=document.querySelector("#number1").value;
+  let input2=document.querySelector("#number2").value;
+  sum= +input1* +input2;
+  let final=document.querySelector("#result");
+  final.innerText=sum;
+}
+function div(){
+  let input1=document.querySelector("#number1").value;
+  let input2=document.querySelector("#number2").value;
+  sum= +input1/ +input2;
+  let final=document.querySelector("#result");
+  final.innerText=sum;
+}
+function clr(){
+   let input1=document.querySelector("#number1").value="";
+  let input2=document.querySelector("#number2").value="";
+   let final=document.querySelector("#result");
+  final.innerText="";
+}
+    </script>
+
+</body>
+</html>
+
